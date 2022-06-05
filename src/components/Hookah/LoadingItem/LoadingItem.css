@@ -1,0 +1,64 @@
+.LoadingItem {
+    width: 220px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.LoadingItem .element {
+    line-height: 1;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+}
+
+.LoadingItem .element::before {
+    will-change: left;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 500px;
+    top: 0;
+    left: -500px;
+    background: linear-gradient(90deg, rgba(25, 25, 25, 0.1), #333333, rgba(25, 25, 25, 0.1));
+    animation: progress 1.2s ease-in-out infinite;
+}
+
+@keyframes progress {
+    0% {
+        left: -500px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .LoadingItem {
+        margin: 0 55px 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .LoadingItem {
+        margin: 0 20px 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .LoadingItem {
+        margin: 0 30px 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .LoadingItem {
+        margin: 0 30px 50px;
+    }
+}

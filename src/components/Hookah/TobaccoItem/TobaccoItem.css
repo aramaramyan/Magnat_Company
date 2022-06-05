@@ -1,0 +1,93 @@
+.TobaccoItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 300px;
+    margin: 0 20px 20px 20px;
+    border-radius: 10px;
+    background: center center no-repeat;
+    background-size: 220px;
+    overflow: hidden;
+    transition: background 1s;
+}
+
+.TobaccoItem:hover {
+    background: left center no-repeat;
+    background-size: 300px;
+}
+
+.TobaccoItem h2 {
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    text-align: start;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.TobaccoItem:hover h2 {
+    opacity: 1;
+}
+
+.TobaccoItem .fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.TobaccoItem:hover .fa {
+    opacity: 1;
+}
+
+.TobaccoItem .icons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 150px;
+    height: 130px;
+    color: white;
+}
+
+.TobaccoItem .icons i {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.TobaccoItem .icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* MEDIA TAGS*/
+
+@media (max-width: 1024px) {
+    .TobaccoItem {
+        margin: 0 55px 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .TobaccoItem {
+        margin: 0 20px 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .TobaccoItem {
+        margin: 0 30px 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .TobaccoItem {
+        margin: 0 30px 50px;
+    }
+}

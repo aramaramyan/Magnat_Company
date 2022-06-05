@@ -1,0 +1,395 @@
+.AddCardModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 4;
+}
+
+.AddCardModal .btn {
+    display: block;
+    background: #bded7d;
+    color: #fff;
+    text-decoration: none;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.AddCardModal .btn:hover {
+    color: var(--darkGray);
+    background: transparent;
+    letter-spacing: 2px;
+}
+
+.AddCardModal .btn::before {
+    top: 0;
+}
+
+.AddCardModal .btn::after {
+    bottom: 0;
+}
+
+.AddCardModal .btn:hover::before,
+.AddCardModal .btn:hover::after {
+    transform: scaleX(1);
+}
+
+.AddCardModal .btn::before,
+.AddCardModal .btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 2px;
+    background: var(--darkGray);
+    transition: all 0.3s;
+}
+
+.AddCardModal .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 150px 50px 0 50px;
+}
+
+.form fieldset {
+    width: 100%;
+    position: relative;
+    border: none;
+    clear: both;
+}
+
+.form fieldset.fieldset-expiration .select {
+    width: 70px;
+    margin-right: 12px;
+    float: left;
+}
+
+.form fieldset label {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: rgba(0, 0, 0, .6);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form fieldset input,
+.form fieldset .select {
+    width: 100%;
+    height: 35px;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.expAndCcv_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form fieldset input.input-cart-number,
+.form fieldset .select.input-cart-number {
+    width: 82px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.form fieldset input.input-cart-number:last-child,
+.form fieldset .select.input-cart-number:last-child {
+    margin-right: 0;
+}
+
+.form fieldset .select {
+    position: relative;
+}
+
+.form fieldset .select::after {
+    content: '';
+    border-top: 8px solid #222;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 10px;
+    pointer-events: none;
+}
+
+.form fieldset .select select {
+    appearance: none;
+    position: absolute;
+    padding: 0;
+    border: none;
+    width: 100%;
+    outline: none !important;
+    top: 6px;
+    left: 6px;
+    background: none;
+}
+
+.form fieldset .select select :-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+.AddCardModal .form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 25px auto;
+    outline: none !important;
+    background: var(--green);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.checkout {
+    margin: 115px auto 30px;
+    position: relative;
+    width: 460px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+}
+
+.credit-card-box {
+    perspective: 1000px;
+    width: 400px;
+    height: 280px;
+    position: absolute;
+    top: -112px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.credit-card-box:hover .flip,
+.credit-card-box.hover .flip {
+    transform: rotateY(180deg);
+}
+
+.credit-card-box .front,
+.credit-card-box .back {
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background: url("./../../img/card_bg.jpeg") 0 0/cover no-repeat;
+    position: absolute;
+    color: var(--white);
+    top: 0;
+    left: 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.credit-card-box .front::before,
+.credit-card-box .back::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    opacity: 0.05;
+}
+
+.credit-card-box .flip {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.credit-card-box .logo {
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    width: 60px;
+}
+
+.credit-card-box .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.credit-card-box .back {
+    transform: rotateY(180deg);
+}
+
+.credit-card-box .back .logo {
+    top: 185px;
+}
+
+.credit-card-box .chip {
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #ddccf0 0%, #d1e9f5 44%, #f8ece7 100%);
+    border-radius: 8px;
+}
+
+.credit-card-box .chip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 4px solid rgba(128, 128, 128, .1);
+    width: 80%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.credit-card-box .strip {
+    background: linear-gradient(135deg, #404040, #1a1a1a);
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 30px;
+    left: 0;
+}
+
+.credit-card-box .number {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 360px;
+    margin: 0 auto;
+    top: 103px;
+    left: 19px;
+    font-size: 30px;
+}
+
+.credit-card-box label {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-shadow: none;
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: normal;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.credit-card-box .card-holder,
+.credit-card-box .card-expiration-date {
+    position: absolute;
+    margin: 0 auto;
+    top: 160px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.card-holder label {
+    text-align: left;
+}
+
+.credit-card-box .card-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    left: 20px;
+}
+
+.credit-card-box .card-expiration-date {
+    text-align: right;
+    left: auto;
+    right: 20px;
+}
+
+.credit-card-box .ccv {
+    height: 36px;
+    background: var(--white);
+    width: 90%;
+    border-radius: 5px;
+    top: 110px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0 auto;
+    color: #000;
+    text-align: right;
+    padding: 5px 10px;
+}
+
+.credit-card-box .ccv label {
+    margin: -30px 80px 15px;
+    color: var(--white);
+}
+
+.the-most {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 50vw;
+    max-width: 200px;
+    padding: 10px;
+}
+
+.the-most img {
+    max-width: 100%;
+}
+
+.card_error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+.card_error img {
+    width: 16px;
+    height: 16px;
+}
+
+.card_error p {
+    color: var(--orange);
+}

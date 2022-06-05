@@ -1,0 +1,123 @@
+.CreditCardItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 60px;
+    padding: 5px 10px;
+    -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.visa_logo {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    border: 1px solid var(--lightGray);
+    border-radius: 7px;
+}
+
+.visa_logo img {
+    width: 40px;
+}
+
+.credit_card_title {
+    width: 100%;
+    overflow: hidden;
+}
+
+.credit_card_title h3 {
+    color: var(--lightGray);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.credit_card_title p,
+.credit_card_delete p {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--lightGray);
+}
+
+.credit_card_delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.credit_card_delete p {
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.credit_card_delete  img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.current {
+    background-color: var(--lightCyan);
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .CreditCardItem {
+        height: 50px;
+    }
+
+    .visa_logo {
+        width: 50px;
+        height: 30px;
+    }
+
+    .visa_logo img {
+        width: 30px;
+    }
+
+    .credit_card_title h3,
+    .credit_card_title p,
+    .credit_card_delete p {
+        font-size: 14px;
+    }
+
+    .credit_card_delete img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .CreditCardItem {
+        height: 60px;
+    }
+
+    .visa_logo {
+        width: 60px;
+        height: 40px;
+    }
+
+    .visa_logo img {
+        width: 40px;
+    }
+
+    .credit_card_title h3,
+    .credit_card_title p,
+    .credit_card_delete p {
+        font-size: 12px;
+    }
+
+    .credit_card_delete img {
+        width: 16px;
+        height: 16px;
+    }
+}

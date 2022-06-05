@@ -1,0 +1,113 @@
+.HookahItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 300px;
+    margin: 0 20px 20px 20px;
+    border-radius: 10px;
+    background: center center no-repeat;
+    background-size: 220px;
+    overflow: hidden;
+    transition: background 1s;
+    cursor: pointer;
+}
+
+.HookahItem:hover {
+    background: left center no-repeat;
+    background-size: 300px;
+}
+
+.border {
+    position: relative;
+    width: 212px;
+    height: 292px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    cursor: pointer;
+}
+
+.border:hover {
+    border: 1px solid white;
+}
+
+.HookahItem h2 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0 0 15px;
+    font-weight: 500;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
+    cursor: pointer;
+}
+
+.HookahItem:hover h2 {
+    opacity: 1;
+}
+
+.HookahItem .fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+    cursor: pointer;
+}
+
+.HookahItem:hover .fa {
+    opacity: 1;
+}
+
+.HookahItem .icons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 150px;
+    height: 130px;
+    color: white;
+    cursor: pointer;
+}
+
+.HookahItem .icons i {
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.HookahItem .icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .HookahItem {
+        margin: 0 55px 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .HookahItem {
+        margin: 0 20px 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .HookahItem {
+        margin: 0 30px 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .HookahItem {
+        margin: 0 30px 50px;
+    }
+}

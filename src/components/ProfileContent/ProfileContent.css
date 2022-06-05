@@ -1,0 +1,129 @@
+.ProfileContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.ProfileContent .left,
+.ProfileContent .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+}
+
+.profile_content_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.profile_content_title img {
+    width: 24px;
+    height: 24px;
+}
+
+.profile_content_title p {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--lightGray);
+}
+
+.credit_cards,
+.history {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    background-color: var(--darkGray);
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.no_purchases {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.no_purchases p {
+    color: var(--lightGray);
+}
+
+.add_credit_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add_credit_card p{
+    width: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--lightCyan);
+    cursor: pointer;
+}
+
+.empty_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.empty_cards p {
+    color: var(--lightGray);
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 900px) {
+    .ProfileContent {
+        flex-direction: column;
+        width: 60%;
+    }
+
+    .ProfileContent .left,
+    .ProfileContent .right {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .ProfileContent {
+        flex-direction: column;
+        width: 100%;
+        height: 70%;
+        margin-bottom: 30px;
+    }
+
+    .ProfileContent .left,
+    .ProfileContent .right {
+        width: 100%;
+        height: 50%;
+    }
+}

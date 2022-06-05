@@ -1,0 +1,126 @@
+.Navbar {
+    position: absolute;
+    top: 0;
+    left: calc((100vw - 1024px) / 2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1024px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background: transparent;
+    z-index: 4;
+}
+
+.nav_items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    height: 60%;
+    list-style: none;
+}
+
+.navbar_icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.basketIcon_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketIcon_count {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    min-width: 16px;
+    height: 16px;
+    margin: -8px -8px 0 0 ;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: var(--white);
+}
+
+.basketIcon_count p {
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+}
+
+.profile_circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.black_circle {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.profile_circle img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.profile_circle p {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .Navbar {
+        left: calc((100vw - 900px) / 2);
+        width: 900px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .Navbar {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar_icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav_items {
+        gap: 24px;
+        height: 60%;
+        list-style: none;
+    }
+
+    .navbar_icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .profile_circle {
+        width: 35px;
+        height: 35px;
+    }
+}
+

@@ -1,0 +1,135 @@
+.HookahFooter {
+    position: relative;
+    bottom: 0;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1024px;
+    min-height: 250px;
+    margin: 0 auto 50px;
+    padding-top: 15px;
+    color: var(--lightGray);
+    z-index: 1;
+}
+
+.HookahFooter section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 240px;
+    height: 100%;
+}
+
+.HookahFooter .section_info {
+    gap: 20px;
+}
+
+.section_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.HookahFooter .title {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.HookahFooter .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.HookahFooter .wrapper_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.HookahFooter .subtitle {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.HookahFooter .subtitle.navigate {
+    cursor: pointer;
+}
+
+.HookahFooter p {
+    font-size: 12px;
+}
+
+.HookahFooter sup {
+    font-weight: 700;
+    font-size: 10px;
+}
+
+.HookahFooter .subtitle.navigate {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.HookahFooter .subtitle.navigate:hover {
+    color: white;
+}
+
+.section_title > img {
+    display: none;
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.section_title > img.rotate180 {
+    transform: rotate(270deg);
+}
+
+@media (max-width: 1024px) {
+    .HookahFooter {
+        width: 900px;
+        gap: 30px;
+    }
+
+    .HookahFooter section {
+        width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .HookahFooter {
+        width: 700px;
+    }
+
+    .HookahFooter section {
+        width: 320px;
+    }
+}
+
+@media (max-width: 700px) {
+    .HookahFooter {
+        width: 480px;
+        margin-top: 50px;
+    }
+
+    .HookahFooter section {
+        width: 100%;
+    }
+
+    .section_title > img {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .HookahFooter {
+        width: 300px;
+    }
+}

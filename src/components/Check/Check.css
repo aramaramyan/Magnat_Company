@@ -1,0 +1,99 @@
+.Check {
+    width: 100%;
+}
+
+.Check h3,
+.Check p {
+    font-family: 'Lekton', sans-serif;
+}
+
+.check_start,
+.check_end {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    background: url("./../../img/check.png");
+}
+
+.check_end {
+    transform: rotate(180deg);
+}
+
+.check_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 10px;
+    background-color: var(--lightGray);
+}
+
+.check_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 1px dashed black;
+}
+
+.check_title p:last-child {
+    margin-bottom: 15px;
+}
+
+.check_products {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+}
+
+.check_total,
+.check_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.check_total {
+    padding-top: 15px;
+    border-top: 1px dashed black;
+}
+
+.check_total p:last-child {
+    font-size: 18px;
+}
+
+.check_card p:last-child {
+    font-size: 14px;
+}
+
+.check_total p:first-child {
+    margin-bottom: 0;
+}
+
+.check_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.check_footer img{
+    width: 60px;
+    height: 60px;
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+
+}

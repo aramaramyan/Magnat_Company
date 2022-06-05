@@ -1,0 +1,50 @@
+.CheckItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CheckItem:first-child {
+    margin-top: 15px;
+}
+
+.CheckItem:last-child {
+    margin-bottom: 15px;
+
+}
+
+.CheckItem p {
+    width: 80px;
+    font-family: 'Lekton', sans-serif;
+    text-align: right;
+}
+
+.CheckItem p:first-child {
+    text-align: left;
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .CheckItem p {
+        width: 65px;
+    }
+}
+
+@media (max-width: 900px) {
+    .CheckItem p {
+        width: 85px;
+    }
+}
+
+@media (max-width: 700px) {
+    .CheckItem p {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .CheckItem p {
+        width: 60px;
+    }
+}

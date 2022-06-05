@@ -1,0 +1,238 @@
+.DescChunk {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    color: var(--white);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.desc_img_left,
+.desc_left {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.desc_img_right,
+.desc_right {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.desc_right > p,
+.desc_left > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.DescChunk.bg1 {
+    background: url("../../../img/HookahHome/bg_1.png") 0 0/cover no-repeat;
+}
+
+.DescChunk.bg2 {
+    background: url("../../../img/HookahHome/bg_2.png") 0 0/cover no-repeat;
+}
+
+.DescChunk.bg3 {
+    background: url("../../../img/HookahHome/bg_3.png") 0 0/cover no-repeat;
+}
+
+.DescChunk.bg4 {
+    background: url("../../../img/HookahHome/bg_4.png") 0 0/cover no-repeat;
+}
+
+.DescChunk.bg5 {
+    background: url("../../../img/HookahHome/bg_5.png") 0 0/cover no-repeat;
+}
+
+@media (max-width: 1024px) {
+    .DescChunk {
+        height: 500px;
+    }
+
+    .desc_img_left,
+    .desc_left,
+    .desc_img_right,
+    .desc_right {
+        top: 50px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .desc_right > p,
+    .desc_left > p {
+        width: 200px;
+        height: 200px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .DescChunk {
+        height: 700px;
+    }
+
+    .DescChunk.bg1 {
+        background-position: -230px 40px;
+    }
+
+    .DescChunk.bg2 {
+        background-position: -85px 40px;
+    }
+
+    .DescChunk.bg3 {
+        background-position: -260px 40px;
+    }
+
+    .DescChunk.bg4 {
+        background-position: -25px 40px;
+    }
+
+    .DescChunk.bg5 {
+        background-position: -150px 80px;
+    }
+
+    .desc_img_left,
+    .desc_left {
+        top: 90px;
+        left: 0;
+        width: 480px;
+        height: 480px;
+    }
+    .desc_img_right,
+    .desc_right {
+        top: 100px;
+        left: 300px;
+        width: 480px;
+        height: 480px;
+    }
+
+    .desc_right > p,
+    .desc_left > p {
+        width: 300px;
+        height: 300px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+
+@media (max-width: 700px) {
+    .DescChunk {
+        height: 600px;
+    }
+
+    .DescChunk.bg1 {
+        background-position: -340px 30px;
+    }
+
+    .DescChunk.bg2 {
+        background-position: -35px 30px;
+    }
+
+    .DescChunk.bg3 {
+        background-position: -335px 30px;
+    }
+
+    .DescChunk.bg4 {
+        background-position: -15px 30px;
+    }
+
+    .DescChunk.bg5 {
+        background-position: -245px 30px;
+    }
+
+    .desc_img_left,
+    .desc_left {
+        top: 100px;
+        left: -25px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .desc_img_right,
+    .desc_right {
+        top: 100px;
+        left: 130px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .desc_right > p,
+    .desc_left > p {
+        width: 200px;
+        height: 250px;
+        font-size: 18px;
+        color: #ffffff;
+        text-shadow: 3px 3px 5px #000000;
+    }
+}
+
+@media (max-width: 480px) {
+    .DescChunk {
+        height: 500px;
+    }
+
+    .DescChunk.bg1,
+    .DescChunk.bg2,
+    .DescChunk.bg3,
+    .DescChunk.bg4,
+    .DescChunk.bg5{
+        background: none;
+    }
+
+
+    .desc_img_left,
+    .desc_left {
+        top: 50px;
+        left: -200px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .desc_img_right,
+    .desc_right {
+        top: 50px;
+        left: 100px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .desc_img_left,
+    .desc_img_right {
+        opacity: 0.5;
+    }
+
+    .desc_left,
+    .desc_right {
+        z-index: 1;
+    }
+
+    .desc_right > p,
+    .desc_left > p {
+        width: 200px;
+        height: 250px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,70 @@
+.AddButton,
+.AddedButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 50px;
+    background-color: var(--green);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.AddedButton {
+    background-color: var(--dark-red);
+}
+
+.AddButton:hover,
+.AddedButton:hover {
+    background: transparent;
+    letter-spacing: 2px;
+}
+
+.AddButton::before,
+.AddedButton::before {
+    top: 0;
+}
+
+.AddButton::after,
+.AddedButton::after {
+    bottom: 0;
+}
+
+.AddButton:hover::before,
+.AddedButton:hover::before,
+.AddButton:hover::after,
+.AddedButton:hover::after{
+    transform: scaleX(1);
+}
+
+.AddButton::before,
+.AddedButton::before,
+.AddButton::after,
+.AddedButton::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+    transition: all 0.3s;
+}
+
+.AddButton img {
+    cursor: pointer;
+}
+
+.AddButton p,
+.AddedButton p {
+    width: auto;
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 1.2rem;
+    text-align: center;
+}
