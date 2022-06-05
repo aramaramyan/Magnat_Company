@@ -1,14 +1,13 @@
 import {useRef, useState} from "react";
 import useFirestore from "../../../hooks/useFirestore";
+import nameValidation from "../../../helpers/nameValidation/nameValidation";
 import saveIcon from "./../../../icons/save.svg";
 import editIcon from "./../../../icons/edit.svg";
 import "./ProfileInput.css";
-import nameValidation from "../../../helpers/nameValidation/nameValidation";
 
 export default function ProfileInput({value = ""}) {
   const [state, setState] = useState(value);
   const [isReadonly, setIsReadonly] = useState(true);
-  const [error, setError] = useState(false);
   const input = useRef(null);
   const { updateUserData } = useFirestore();
 
