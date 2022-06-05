@@ -1,0 +1,386 @@
+.Basket {
+    width: 100%;
+    height: 100vh;
+}
+
+.Basket > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 1024px;
+    height: calc(100vh - 380px);
+    margin: 80px auto 0;
+    background-color: black;
+    border: none;
+}
+
+.basket_title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.basket_title h2 {
+    color: var(--lightGray);
+    text-align: left;
+}
+
+.basket_content {
+    width: 100%;
+    height: 440px;
+    background-color: var(--darkGray);
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.basket_content_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+
+.basket_content_head_item {
+    width: 335px;
+    text-align: center;
+    color: var(--white);
+}
+
+.basket_content_head_item:first-child {
+    padding-left: 30px;
+    text-align: left;
+    width: 100%;
+}
+
+.basket_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.basket_footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.current_card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 70px;
+    width: 100%;
+    height: 100%;
+}
+
+.back_to_shopping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--lightGray);
+    cursor: pointer;
+}
+
+.back_to_shopping h3 {
+    cursor: pointer;
+}
+
+.back_to_shopping img {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.basket_order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    height: 100%;
+    color: var(--green);
+}
+
+.subtotal p:first-child,
+.subtotal p:last-child {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.subtotal p:last-child {
+    font-size: 24px;
+}
+
+.empty_basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkGray);
+    border-radius: 10px;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.empty_basket img {
+    width: 60px;
+    height: 60px;
+}
+
+.empty_basket p {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--lightGray);
+}
+
+.basket_loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkGray);
+    border-radius: 10px;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.basket_loading p {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--lightGray);
+    letter-spacing: 2px;
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.BasketLoader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.BasketLoader::before {
+    will-change: left;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 300px;
+    top: 0;
+    left: -300px;
+    background: linear-gradient(90deg, rgba(25, 25, 25, 0.1), #333333, rgba(25, 25, 25, 0.1));
+    animation: progress 1.2s ease-in-out infinite;
+}
+
+.current_card_item,
+.select_current_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 300px;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid var(--lightGray);
+    border-radius: 10px;
+}
+
+.select_current_card {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.heartbeat {
+    -webkit-animation: heartbeat 1.5s ease-in-out both;
+    animation: heartbeat 1.5s ease-in-out both;
+}
+
+.select_current_card p {
+    font-size: 14px;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.current_card_item_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10px;
+    border-left: 1px solid var(--lightGray);
+    overflow: hidden;
+}
+
+.current_card_item_title p {
+    font-size: 12px;
+    color: var(--lightGray);
+}
+
+/* Animation KEYFRAMES */
+
+@-webkit-keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .Basket > .container {
+        width: 900px;
+        height: 100%;
+
+    }
+
+    .basket_order {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .current_card {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .Basket > .container {
+        width: 700px;
+    }
+
+    .basket_footer {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 20px;
+        height: 200px;
+    }
+
+    .basket_order {
+        justify-content: space-between;
+    }
+
+    .subtotal {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 700px) {
+    .Basket > .container {
+        width: 480px;
+    }
+
+    .subtotal {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .Basket > .container {
+        width: 300px;
+    }
+
+    .current_card {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .basket_footer {
+        height: 240px;
+        gap: 20px;
+    }
+
+    .basket_order {
+        flex-direction: column;
+    }
+
+    .subtotal {
+        height: auto;
+    }
+}

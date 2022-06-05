@@ -1,0 +1,271 @@
+.HookahSingleProduct,
+.TobaccoSingleProduct {
+    width: 100%;
+}
+
+.HookahSingleProduct .container,
+.TobaccoSingleProduct .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1024px;
+    height: auto;
+    margin: 80px auto 50px;
+    background-color: black;
+    border: none;
+}
+
+.HookahSingleProduct .single_product_img,
+.TobaccoSingleProduct .single_product_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 590px;
+}
+
+.single_product_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    width: 70%;
+    height: 100%;
+    padding-left: 20px;
+}
+
+
+.single_product_description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.add_to_basket_section,
+.description_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    color: var(--lightGray);
+}
+
+.add_to_basket_section {
+    padding-left: 20px;
+}
+
+.add_to_basket_section h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.description_section p{
+    font-size: 13px;
+    line-height: 2;
+}
+
+.add_to_basket_section h2{
+    text-align: left;
+}
+
+.favorite_mark {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.favorite_mark img {
+    cursor: pointer;
+}
+
+
+.single_product_reviews {
+    width: 100%;
+    height: 100%;
+}
+
+/* TOBACCO STYLES */
+
+.tobacco_img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .HookahSingleProduct .container,
+    .TobaccoSingleProduct .container {
+        width: 900px;
+        margin: 80px auto 40px;
+    }
+
+    .HookahSingleProduct .single_product_img,
+    .TobaccoSingleProduct .single_product_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 560px;
+    }
+
+    .add_to_basket_section {
+        padding-left: 20px;
+    }
+
+    .add_to_basket_section h3 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .description_section p {
+        font-size: 12px;
+        line-height: 2;
+    }
+}
+
+@media (max-width: 900px) {
+    .HookahSingleProduct .container,
+    .TobaccoSingleProduct .container {
+        width: 700px;
+    }
+
+    .HookahSingleProduct .single_product_img,
+    .TobaccoSingleProduct .single_product_img {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 30%;
+        height: 590px;
+    }
+
+    .single_product_description {
+        align-items: flex-start;
+    }
+
+    .add_to_basket_section {
+        padding-left: 20px;
+        gap: 5px;
+    }
+
+    .add_to_basket_section h2 {
+        font-size: 20px;
+    }
+
+    .add_to_basket_section h3 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .description_section p {
+        font-size: 12px;
+        line-height: 2;
+    }
+}
+
+@media (max-width: 700px) {
+    .HookahSingleProduct .container,
+    .TobaccoSingleProduct .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        width: 480px;
+        margin: 80px auto 50px;
+        background-color: black;
+        border: none;
+    }
+
+    .HookahSingleProduct .single_product_img,
+    .TobaccoSingleProduct .single_product_img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 590px;
+    }
+
+    .single_product_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+
+    .single_product_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .add_to_basket_section,
+    .description_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        color: var(--lightGray);
+    }
+
+    .add_to_basket_section {
+        padding-left: 0;
+    }
+
+    .add_to_basket_section h2 {
+        font-size: 24px;
+    }
+
+    .add_to_basket_section h3 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .description_section p{
+        font-size: 13px;
+    }
+
+    .single_product_reviews {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .HookahSingleProduct .container,
+    .TobaccoSingleProduct .container {
+        width: 300px;
+    }
+
+    .TobaccoSingleProduct .single_product_img {
+        height: 350px;
+    }
+
+    .add_to_basket_section h2 {
+        font-size: 20px;
+    }
+
+    .add_to_basket_section h3 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .description_section p{
+        font-size: 12px;
+    }
+}

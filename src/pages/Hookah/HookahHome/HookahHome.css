@@ -1,0 +1,75 @@
+.HookahHome {
+    width: 100%;
+    height: 100%;
+}
+
+.hookah_home_content {
+    width: 1024px;
+    margin: 50px auto 0;
+    background: url("../../../img/HookahHome/dotted_shape.png") 0 0 no-repeat;
+}
+
+.test {
+    width: 100%;
+    height: 100vh;
+}
+
+.hide {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 420px;
+    background: black;
+    box-shadow: 0 0 25px 10px black;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .hookah_home_content {
+        width: 900px;
+        margin: 0 auto;
+        background: url("../../../img/HookahHome/dotted_shape_1024px.png") 0 0 no-repeat;
+    }
+
+    .hide {
+        height: 360px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hookah_home_content {
+        width: 700px;
+        margin: 0 auto;
+        background: url("../../../img/HookahHome/dotted_shape_900px.png") 0 0 no-repeat;
+    }
+
+    .hide {
+        height: 350px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hookah_home_content {
+        width: 480px;
+        background: url("../../../img/HookahHome/dotted_shape_700px.png") 0 0 no-repeat;
+    }
+
+    .hide {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hookah_home_content {
+        width: 300px;
+        background: url("../../../img/HookahHome/dotted_shape_480px.png") 0 0 no-repeat;
+    }
+
+    .hide {
+        height: 380px;
+    }
+}

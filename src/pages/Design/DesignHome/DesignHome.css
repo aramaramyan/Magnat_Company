@@ -1,0 +1,105 @@
+.DesignHome {
+    width: 100vw;
+    height: 100vh;
+    background: var(--white);
+}
+
+.design_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.design_img {
+    width: 300px;
+    height: 300px;
+    background: url("./../../../img/MagnatDesign.png") 0 0/contain no-repeat;
+}
+
+.design_content > h3,
+.design_content > p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.go_to_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.go_to_main img {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.go_to_main p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--lightGray);
+    cursor: pointer;
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .design_content {
+        width: 900px;
+    }
+
+    .design_img {
+        width: 300px;
+        height: 300px;
+        background: url("./../../../img/MagnatDesign.png") 0/contain no-repeat;
+    }
+
+    .design_content p {
+
+    }
+
+    .go_to_main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .go_to_main img {
+        transform: rotate(180deg);
+        cursor: pointer;
+    }
+
+    .go_to_main p {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--lightGray);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 900px) {
+    .design_content {
+        width: 700px;
+    }
+}
+
+@media (max-width: 700px) {
+    .design_content {
+        width: 480px;
+    }
+}
+
+@media (max-width: 480px) {
+    .design_content {
+        width: 300px;
+    }
+}

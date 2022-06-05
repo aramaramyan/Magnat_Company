@@ -1,0 +1,187 @@
+.Policy {
+    width: 100%;
+    color: var(--lightGray)
+}
+
+.policy_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 1024px;
+    margin: 80px auto 50px;
+    border: none;
+}
+
+.policy_container h1,
+.policy_container h3,
+.policy_container p {
+    z-index: 2;
+}
+
+.privacy_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0 20px;
+}
+
+.privacy_title img {
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+
+.privacy_title h1 {
+    color: var(--drak-gold);
+    border-top: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    padding: 5px 0;
+    letter-spacing: 2px;
+}
+
+.privacy_subtitle {
+    width: 900px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.policy_article {
+    color: var(--drak-gold);
+    margin: 10px 0;
+}
+
+.policy_container p {
+    padding-left: 20px;
+}
+
+.subArticle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--drak-gold);
+}
+
+.blur_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./../../../img/HookahHome/hookah_gold.png") center no-repeat fixed;
+    filter: blur(2px);
+    opacity: 0.5;
+}
+
+/* MEDIA TAGS */
+
+@media (max-width: 1024px) {
+    .policy_container {
+        width: 900px;
+    }
+
+    .privacy_title img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .privacy_title h1 {
+        font-size: 22px;
+        padding: 3px 0;
+        letter-spacing: 2px;
+    }
+
+    .privacy_subtitle {
+        width: 700px;
+        font-size: 18px;
+    }
+
+    .policy_article {
+        margin: 8px 0;
+    }
+
+    .policy_container p {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .policy_container {
+        width: 700px;
+    }
+
+    .privacy_title h1 {
+        font-size: 20px;
+    }
+
+    .privacy_subtitle {
+        width: 550px;
+        font-size: 16px;
+    }
+
+    .policy_article {
+        margin: 6px 0;
+    }
+
+    .policy_container p {
+        padding-left: 13px;
+    }
+}
+
+@media (max-width: 700px) {
+    .policy_container {
+        width: 480px;
+    }
+
+    .privacy_title img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .privacy_title h1 {
+        font-size: 26px;
+        padding: 5px 0;
+        letter-spacing: 2px;
+    }
+
+    .privacy_subtitle {
+        width: 400px;
+        text-align: justify;
+    }
+
+    .policy_container p {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy_container {
+        width: 300px;
+    }
+
+    .privacy_title h1 {
+        font-size: 26px;
+        padding: 5px 0;
+        letter-spacing: 2px;
+    }
+
+    .privacy_subtitle {
+        width: 280px;
+        font-size: 14px;
+    }
+
+    .policy_container p {
+        font-size: 14px;
+    }
+
+    .subArticle {
+        font-size: 16px;
+    }
+}
+
+
+
