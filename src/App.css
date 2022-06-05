@@ -1,0 +1,22 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+
+.icon24 {
+    width: 24px;
+    height: 24px;
+}
+
+.icon32 {
+    width: 32px;
+    height: 32px;
+}
+
+.burger_open {
+    height: 100vh;
+    overflow: hidden;
+}

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* TYPEWRITE - font-family: 'Lekton', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    cursor: default;
+}
+
+html {
+    background-color: black;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+:root {
+    --white: #eeeeee;
+    --lightGray: #bdbdbd;
+    --darkGray: #262626;
+    --red: #d30000;
+    --dark-red: #8c2828;
+    --green: #16b081;
+    --lightCyan: #5f9ea0;
+    --drak-gold: #7e7645;
+    --primary: #275efe;
+    --primary-light: #7699ff;
+    --dark: #1c212e;
+    --grey-dark: #3f4656;
+    --grey: #6c7486;
+    --grey-light: #cdd9ed;
+    --sand: #dcb773;
+    --sand-light: #edd9a9;
+    --orange: #ffa917;
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+    width: 2px;
+}
