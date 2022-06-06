@@ -27,15 +27,15 @@ export default function HookahFooter() {
   }
 
   function toProfile() {
-    navigate("/profile");
+    navigate("/hookah/profile");
   }
 
   function toBasket() {
-    navigate("/basket");
+    navigate("/hookah/basket");
   }
 
   function toPolicy() {
-    navigate("/hookah/products");
+    navigate("/hookah/policy");
   }
 
   function toggleSection1() {

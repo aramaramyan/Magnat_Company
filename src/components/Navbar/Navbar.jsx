@@ -1,9 +1,13 @@
+import {useEffect, useRef, useState} from "react";
 import {NavLink} from "react-router-dom";
 import {useParams} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
-import {closeModal, handleBurger, handleProfileModal} from "../../appState/appSlice";
+import {closeModal, handleProfileModal} from "../../appState/appSlice";
 import useWindowSize from "../../hooks/useWindowSize";
+import useFirestore from "../../hooks/useFirestore";
+import getUserNameFirstLetter from "../../helpers/getUserNameFirstLetter/getUserNameFirstLetter";
 import Burger from "../Burger/Burger";
+import ProfileModal from "../ProfileModal/ProfileModal";
 import M_Logo from "./../../icons/M.png";
 import M_LogoBlack from "./../../icons/M_black.png";
 import homeIcon from "./../../icons/home.png";
@@ -11,13 +15,8 @@ import bagIcon from "./../../icons/bag.png";
 import bagBlackIcon from "./../../icons/bag_black.png";
 import hookahIcon from "./../../icons/hookah.svg";
 import "./Navbar.css";
-import ProfileModal from "../ProfileModal/ProfileModal";
-import {useEffect, useRef, useState} from "react";
-import useFirestore from "../../hooks/useFirestore";
-import getUserNameFirstLetter from "../../helpers/getUserNameFirstLetter/getUserNameFirstLetter";
 
 export default function Navbar({count}) {
-  const isBurgerOpen = useSelector(state => state.app.isBurgerOpen);
   const isProfileModalOpen = useSelector(state => state.app.isProfileModalOpen);
   const [user, setUser] = useState({});
   const {param} = useParams();
@@ -63,6 +62,7 @@ export default function Navbar({count}) {
                 </div>
               </NavLink>
               <div ref={elemRef} className={`profile_circle ${param === "design"? "black_circle" : ""}`} onClick={toggleProfileModal}>
+                {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
                 {user.image ? <img src={user.image} alt="User Image"/>
                   : <p style={{color: `${param === "design"? "#000000" : "var(--white)"}`}}>{getUserNameFirstLetter(user.fullName)}</p>}
               </div>
