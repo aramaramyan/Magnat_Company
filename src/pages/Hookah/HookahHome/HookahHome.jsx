@@ -3,6 +3,7 @@ import ScrollStart from "../../../components/ScrollStart/ScrollStart";
 import DescChunk from "../../../components/Hookah/DescChunk/DescChunk";
 import HeroSection from "../../../components/Hookah/HeroSection/HeroSection";
 import HookahFooter from "../../../components/Hookah/HookahFooter/HookahFooter";
+import ScrollToTopButton from "../../../components/ScrollToTopButton/ScrollToTopButton";
 import image1 from "../../../img/HookahHome/1.png";
 import image2 from "../../../img/HookahHome/2.png";
 import image3 from "../../../img/HookahHome/3.png";
@@ -25,6 +26,7 @@ export default function HookahHome() {
         <DescChunk img={image5} desc={descArr[4]} isLeft={true} bg="bg5" />
         <div className="hide"/>
         <HookahFooter />
+        <ScrollToTopButton />
       </div>
     </div>
   );

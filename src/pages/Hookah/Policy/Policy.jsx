@@ -2,6 +2,7 @@ import {useSelector} from "react-redux";
 import ScrollStart from "../../../components/ScrollStart/ScrollStart";
 import Navbar from "../../../components/Navbar/Navbar";
 import HookahFooter from "../../../components/Hookah/HookahFooter/HookahFooter";
+import ScrollToTopButton from "../../../components/ScrollToTopButton/ScrollToTopButton";
 import hookahLogo from  "./../../../img/MagnatHookah.png";
 import "./Policy.css";
 
@@ -107,6 +108,7 @@ export default function Policy() {
         <div className="blur_container"/>
       </div>
       <HookahFooter/>
+      <ScrollToTopButton />
     </div>
   );
 }
