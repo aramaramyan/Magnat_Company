@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {useSelector} from "react-redux";
 import useFirestore from "../../../hooks/useFirestore";
 import getBasketCount from "../../../helpers/getBasketCount";
+import ScrollStart from "../../../components/ScrollStart/ScrollStart";
 import Navbar from "../../../components/Navbar/Navbar";
 import ProfileAside from "../../../components/ProfileAside/ProfileAside";
 import ProfileContent from "../../../components/ProfileContent/ProfileContent";
@@ -26,6 +27,7 @@ export default function HookahProfile() {
 
   return (
     <div className={`HookahProfile ${isCardModalOpen? "card_modal_open" : "" || isBurgerOpen? "burger_open" : ""}`}>
+      <ScrollStart />
       <Navbar count={basketCount}/>
       <div className="profile_wrapper">
         <div className="content">

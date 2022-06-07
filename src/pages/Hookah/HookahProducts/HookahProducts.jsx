@@ -1,3 +1,4 @@
+import ScrollStart from "../../../components/ScrollStart/ScrollStart";
 import Navbar from "../../../components/Navbar/Navbar";
 import Products from "../../../components/Hookah/Products/Products";
 import HookahFooter from "../../../components/Hookah/HookahFooter/HookahFooter";
@@ -9,6 +10,7 @@ export default function HookahProducts() {
 
   return (
     <div className="HookahProducts">
+      <ScrollStart />
       <Navbar count={basketCount}/>
       <div className="hookah_products_container">
         <div className="products_hero_section" />

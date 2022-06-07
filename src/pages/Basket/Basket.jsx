@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router";
 import {useSelector} from "react-redux";
+import ScrollStart from "../../components/ScrollStart/ScrollStart";
 import Navbar from "../../components/Navbar/Navbar";
 import useFirestore from "../../hooks/useFirestore";
 import useWindowSize from "../../hooks/useWindowSize";
@@ -45,6 +46,7 @@ export default function Basket() {
 
   return (
     <div className={`Basket ${isBurgerOpen ? "burger_open" : ""}`}>
+      <ScrollStart />
       <Navbar count={basketCount}/>
       <div className="container">
         <div className="basket_title">

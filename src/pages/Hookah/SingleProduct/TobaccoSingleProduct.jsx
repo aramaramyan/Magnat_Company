@@ -1,4 +1,5 @@
 import {useSelector} from "react-redux";
+import ScrollStart from "../../../components/ScrollStart/ScrollStart";
 import Navbar from "../../../components/Navbar/Navbar";
 import HookahFooter from "../../../components/Hookah/HookahFooter/HookahFooter";
 import {useParams} from "react-router";
@@ -70,6 +71,7 @@ export default function TobaccoSingleProduct() {
 
   return (
     <div className={`TobaccoSingleProduct ${isBurgerOpen ? "burger_open" : ""}`}>
+      <ScrollStart />
       <Navbar count={basketCount}/>
       {tobacco.title ? (
         <div className="container">

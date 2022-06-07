@@ -1,4 +1,5 @@
 import {useSelector} from "react-redux";
+import ScrollStart from "../../../components/ScrollStart/ScrollStart";
 import Navbar from "../../../components/Navbar/Navbar";
 import HookahFooter from "../../../components/Hookah/HookahFooter/HookahFooter";
 import hookahLogo from  "./../../../img/MagnatHookah.png";
@@ -9,6 +10,7 @@ export default function Policy() {
 
   return (
     <div className={`Policy ${isBurgerOpen? "burger_open" : ""}`}>
+      <ScrollStart />
       <Navbar/>
       <div className="policy_container">
         <div className="privacy_title">

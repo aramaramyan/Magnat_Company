@@ -1,4 +1,5 @@
 import {useSelector} from "react-redux";
+import ScrollStart from "../../../components/ScrollStart/ScrollStart";
 import DescChunk from "../../../components/Hookah/DescChunk/DescChunk";
 import HeroSection from "../../../components/Hookah/HeroSection/HeroSection";
 import HookahFooter from "../../../components/Hookah/HookahFooter/HookahFooter";
@@ -14,6 +15,7 @@ export default function HookahHome() {
 
   return (
     <div className="HookahHome">
+      <ScrollStart />
       <HeroSection />
       <div className="hookah_home_content">
         <DescChunk img={image1} desc={descArr[0]} isLeft={true} bg="bg1" />
