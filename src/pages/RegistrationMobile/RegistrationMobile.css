@@ -1,4 +1,4 @@
-.RegistrationMobile  {
+.RegistrationMobile {
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -31,7 +31,7 @@
 
 .form-wrapper .signup {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     width: 65%;
@@ -73,7 +73,7 @@
 .form-wrapper .signup .form-holder {
     position: relative;
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 15px;
     opacity: 1;
     visibility: visible;
     -webkit-transition: all 0.5s ease;
@@ -93,6 +93,7 @@
     line-height: 30px;
     padding: 8px 15px;
     border-bottom: 1px solid var(--lightGray);
+    border-radius: 0;
     width: 100%;
     font-size: 16px;
     color: var(--lightGray);
@@ -153,6 +154,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../../img/Registration/mob_bg2.png");
+    background-position: -93px 0;
     width: 200%;
     height: 550px;
     border-radius: 50%;

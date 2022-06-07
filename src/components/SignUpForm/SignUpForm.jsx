@@ -207,26 +207,32 @@ export default function SignUpForm({isSlide, handleSlide}) {
         <p>I'm over 21</p>
       </label>
       <button className="submit-btn" onClick={formSubmit}>Sign up</button>
-      {ageError && (
-        <div className="error_wrapper">
-          <img src={warningIcon} alt="Warning Icon"/>
-          <p>Please submit age</p>
-        </div>)}
-      {fullName.error && fullName.error !== "Please fill input" && (
-        <div className="error_wrapper">
-          <img src={warningIcon} alt="Warning Icon"/>
-          <p>{fullName.error}</p>
-        </div>)}
-      {email.error && email.error !== "Please fill input" && (
-        <div className="error_wrapper">
-          <img src={warningIcon} alt="Warning Icon"/>
-          <p>{email.error}</p>
-        </div>)}
-      {password.error && password.error !== "Please fill input" && (
-        <div className="error_wrapper">
-          <img src={warningIcon} alt="Warning Icon"/>
-          <p>{password.error}</p>
-        </div>)}
+      <div className="error_wrapper">
+        {ageError && (
+          <>
+            <img src={warningIcon} alt="Warning Icon"/>
+            <p>Please submit age</p>
+          </>
+        )}
+        {fullName.error && fullName.error !== "Please fill input" && (
+          <>
+            <img src={warningIcon} alt="Warning Icon"/>
+            <p>{fullName.error}</p>
+          </>
+        )}
+        {email.error && email.error !== "Please fill input" && (
+          <>
+            <img src={warningIcon} alt="Warning Icon"/>
+            <p>{email.error}</p>
+          </>
+        )}
+        {password.error && password.error !== "Please fill input" && (
+          <>
+            <img src={warningIcon} alt="Warning Icon"/>
+            <p>{password.error}</p>
+          </>
+        )}
+      </div>
     </div>
   );
 }
