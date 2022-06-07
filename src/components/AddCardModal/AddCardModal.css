@@ -393,3 +393,119 @@ input[type=number] {
 .card_error p {
     color: var(--orange);
 }
+
+/* MEDIA TAGS */
+
+@media (max-width: 480px) {
+    .AddCardModal .form {
+        justify-content: flex-start;
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+
+    .AddCardModal .form button {
+        margin: 15px auto;
+    }
+
+    .checkout {
+        width: 300px;
+        height: 400px;
+    }
+
+    .credit-card-box,
+    .credit-card-box {
+        width: 250px;
+        height: 175px;
+    }
+
+    .credit-card-box .front,
+    .credit-card-box .back {
+        width: 250px;
+        height: 160px;
+    }
+
+    .credit-card-box .chip {
+        position: absolute;
+        width: 35px;
+        height: 26px;
+        top: 10px;
+        left: 10px;
+        border-radius: 5px;
+    }
+
+    .credit-card-box .logo {
+        top: 5px;
+        right: 0;
+    }
+
+    .credit-card-box .card-holder,
+    .credit-card-box .card-expiration-date {
+        top: 85px;
+        font-size: 14px;
+    }
+
+    .credit-card-box .card-holder p {
+        width: 150px;
+        overflow: hidden;
+    }
+
+    .credit-card-box .logo img {
+        width: 40px;
+    }
+
+    .credit-card-box label {
+        font-size: 8px;
+    }
+
+    .credit-card-box .number {
+        top: 60px;
+        width: 210px;
+        font-size: 20px;
+    }
+
+    .credit-card-box .strip {
+        height: 30px;
+    }
+
+    .credit-card-box .ccv label {
+        margin: -23px -50px 15px;
+    }
+
+    .credit-card-box .back .logo {
+        top: 120px;
+    }
+
+    .credit-card-box .ccv {
+        top: 85px;
+        height: 25px;
+        border-radius: 3px;
+    }
+
+    .credit-card-box .ccv p {
+        margin: -9px 0;
+    }
+
+    .form fieldset input,
+    .form fieldset .select {
+        height: 30px;
+    }
+
+    .form fieldset input.input-cart-number,
+    .form fieldset .select.input-cart-number {
+        width: 60px;
+        margin-right: 8px;
+    }
+
+    .form fieldset.fieldset-expiration .select {
+        width: 55px;
+        margin-right: 10px;
+    }
+
+    .card_error {
+        margin-bottom: 0;
+    }
+
+    .card_error p{
+        font-size: 12px;
+    }
+}

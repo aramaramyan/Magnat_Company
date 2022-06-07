@@ -339,7 +339,7 @@
         flex-direction: column-reverse;
         align-items: flex-end;
         gap: 20px;
-        height: 200px;
+        max-height: 240px;
     }
 
     .basket_order {
@@ -348,6 +348,10 @@
 
     .subtotal {
         justify-content: flex-start;
+    }
+
+    .basket_footer {
+        height: 150px;
     }
 }
 
