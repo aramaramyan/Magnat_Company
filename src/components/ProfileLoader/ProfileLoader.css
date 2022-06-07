@@ -83,3 +83,43 @@
         left: 100%;
     }
 }
+
+/* MEDIA TAGS */
+
+@media (max-width: 700px) {
+    .ProfileLoader {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .aside_loader {
+        width: 100%;
+    }
+
+    .avatar-loader {
+        width: 150px;
+        height: 150px;
+    }
+
+    .input_loader {
+        position: relative;
+        width: 50%;
+    }
+
+    .content_loader {
+        flex-direction: column;
+    }
+
+    .content_loader .left,
+    .content_loader .right {
+        flex-direction: column;
+    }
+
+    .content_loader .left .input_loader,
+    .content_loader .right .input_loader {
+        width: 80%;
+    }
+}
