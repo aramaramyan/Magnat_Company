@@ -10,6 +10,7 @@
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    overflow: hidden;
     z-index: 4;
 }
 
@@ -505,7 +506,141 @@ input[type=number] {
         margin-bottom: 0;
     }
 
-    .card_error p{
+    .card_error p {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 700px) {
+    .AddCardModal .form {
+        padding: 100px 10px 0 10px;
+    }
+
+    .form fieldset {
+        height: 55px;
+    }
+
+    .form fieldset label {
+        margin: 5px 0;
+        font-size: 10px;
+    }
+
+    .checkout {
+        width: 300px;
+        height: 350px;
+        margin: 20px auto 0;
+    }
+
+    .credit-card-box .front,
+    .credit-card-box .back {
+        top: 90px;
+        left: 100px;
+        width: 200px;
+        height: 125px;
+    }
+
+    .credit-card-box .chip {
+        top: 13px;
+        left: 13px;
+        width: 30px;
+        height: 22px;
+        border-radius: 3px;
+    }
+
+    .credit-card-box .logo {
+        top: 7px;
+        right: -13px;
+    }
+
+    .credit-card-box .logo img {
+        width: 35px;
+    }
+
+    .credit-card-box .number {
+        top: 55px;
+        width: 160px;
+        font-size: 12px;
+    }
+
+    .credit-card-box .card-holder,
+    .credit-card-box .card-expiration-date {
+        top: 60px;
+    }
+
+    .credit-card-box label {
+        font-size: 6px;
+    }
+
+    .credit-card-box .card-holder {
+        width: 120px;
+        font-size: 12px;
+        overflow: hidden;
+    }
+
+    .credit-card-box .card-expiration-date p {
+        width: 260px;
+        font-size: 10px;
+        overflow: hidden;
+    }
+
+    .credit-card-box .strip {
+        top: 25px;
+        height: 20px;
+    }
+
+    .credit-card-box .back .logo {
+        top: 90px;
+    }
+
+    .credit-card-box .ccv {
+        top: 63px;
+        height: 20px;
+        padding: 7px 10px;
+    }
+
+    .credit-card-box .ccv p {
+        font-size: 12px;
+    }
+
+    .credit-card-box .ccv label {
+        margin: -20px -95px 5px;
+    }
+
+    .form fieldset input.input-cart-number,
+    .form fieldset .select.input-cart-number {
+        width: 64px;
+        height: 25px;
+    }
+
+    .form fieldset input,
+    .form fieldset .select {
+        height: 25px;
+    }
+
+    .form fieldset.fieldset-expiration .select {
+        width: 55px;
+        margin-right: 10px;
+    }
+
+    .form fieldset.fieldset-expiration .select::after {
+        top: 10px;
+        right: 6px;
+    }
+
+    .AddCardModal .form button {
+        width: 40%;
+        height: 30px;
+        margin: 10px auto;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .card_error {
+        height: 15px;
+        margin-bottom: 10px;
+    }
+
+    .card_error p {
         font-size: 12px;
     }
 }
