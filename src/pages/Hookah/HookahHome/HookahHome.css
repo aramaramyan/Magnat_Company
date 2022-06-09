@@ -73,3 +73,9 @@
         height: 380px;
     }
 }
+
+@media (max-height: 700px) and (orientation: landscape) {
+    .hide {
+        height: 200px;
+    }
+}
