@@ -310,3 +310,64 @@
         height: 40%;
     }
 }
+
+@media (max-height: 700px) and (orientation: landscape) {
+    .home_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .split {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: 1s all cubic-bezier(0.87, 0.76, 0.33, 0.98);
+        overflow: hidden;
+    }
+
+    .hover-left .split.left {
+        width: 60%;
+        height: 100%;
+    }
+
+    .hover-left .split.right {
+        width: 40%;
+        height: 100%;
+    }
+
+    .hover-right .split.right {
+        width: 60%;
+        height: 100%;
+    }
+
+    .hover-right .split.left {
+        width: 40%;
+        height: 100%;
+    }
+
+    .text {
+        width: 250px;
+        height: 250px;
+    }
+
+    .text .subtitle {
+        font-size: 14px;
+    }
+
+    .text .title {
+        font-size: 30px;
+    }
+
+    .text .desc {
+        font-size: 10px;
+        line-height: 1;
+        margin: 10px 0 30px 0;
+        width: 250px;
+    }
+}

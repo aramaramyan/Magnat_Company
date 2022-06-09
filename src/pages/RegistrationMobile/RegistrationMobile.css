@@ -163,7 +163,7 @@
 
 .form-wrapper .login .center {
     position: absolute;
-    top: calc(50% - 10%);
+    top: 40%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     width: 65%;
@@ -252,5 +252,66 @@
     .form-wrapper {
         width: 290px;
         height: 460px;
+    }
+}
+
+@media (max-height: 700px) and (orientation: landscape)  {
+    .RegistrationMobile .form-wrapper {
+        height: 300px;
+    }
+
+    .form-wrapper .signup {
+        top: 45%;
+    }
+
+    .form-wrapper .signup .form-title {
+        font-size: 20px;
+    }
+
+    .form-wrapper .signup .form-holder {
+        margin-top: 0;
+    }
+
+    .form-wrapper .signup .form-holder .input,
+    .form-wrapper .login .center .form-holder .input {
+        height: 30px;
+        padding: 3px 15px;
+    }
+
+    .form-wrapper .signup .submit-btn,
+    .form-wrapper .login .submit-btn {
+        width: 150px;
+        height: 30px;
+        font-size: 14px;
+        margin: 10px auto;
+    }
+
+    .signup .submit_age {
+        margin-top: 10px;
+    }
+
+    .form-wrapper .login::before {
+        top: -10px;
+    }
+
+    .form-wrapper .login.slide-up .center {
+        top: 0;
+    }
+
+    .form-wrapper .login .center {
+        top: 45%;
+    }
+
+    .form-wrapper .login .center .form-holder {
+        margin-top: 0;
+    }
+
+    .form-wrapper .login::before {
+        background-size: 45%;
+        background-position: 345px 12px;
+    }
+
+    .form-wrapper::after {
+        background-size: 50%;
     }
 }

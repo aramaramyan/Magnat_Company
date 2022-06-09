@@ -69,7 +69,7 @@ export default function SignInForm({isSlide, handleSlide}) {
 
   return windowWidth > 1024 ? (
     <div className="form sign-in">
-      <h2>Welcome back,</h2>
+      <h2>Welcome back</h2>
       <label>
         <span>Email</span>
         <input

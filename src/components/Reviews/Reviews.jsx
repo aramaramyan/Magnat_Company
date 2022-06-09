@@ -18,8 +18,9 @@ export default function Reviews({type, user, product}) {
   }
 
   function isTextExist() {
-    if(!state) {
+    if(!state.trim()) {
       setPlaceholder("You can't send empty review!");
+      setState("");
       return false;
     } else {
       const comment = {

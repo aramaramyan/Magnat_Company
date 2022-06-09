@@ -68,7 +68,7 @@ export default function ProfileContent({user = {}}) {
         </div>
         <div className="history">
           {user.history.length ? (
-            user.history.map(item => <Check item={item}/>
+            user.history.map(item => <Check key={item.id} item={item}/>
             )) : (
               <div className="no_purchases">
                 <img src={banIcon} alt="Ban Icon" className="icon24"/>

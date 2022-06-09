@@ -400,3 +400,20 @@ label {
     border-left-color: transparent;
     border-radius: 0;
 }
+
+@media (max-height: 700px) and (orientation: landscape) {
+    .Registration, .RegistrationMobile {
+        gap: 10px;
+    }
+
+    .RegistrationMobile .footer p {
+        font-size: 10px;
+    }
+
+    .sign-up .error_wrapper,
+    .sign-in .error_wrapper,
+    .signup .error_wrapper,
+    .login .error_wrapper {
+        height: 20px;
+    }
+}

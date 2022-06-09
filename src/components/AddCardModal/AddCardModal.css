@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -397,7 +397,7 @@ input[type=number] {
 
 /* MEDIA TAGS */
 
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
     .AddCardModal .form {
         justify-content: flex-start;
         margin-top: 40px;
@@ -502,6 +502,11 @@ input[type=number] {
         margin-right: 10px;
     }
 
+    .form fieldset.fieldset-expiration .select::after {
+        top: 12px;
+        right: 4px;
+    }
+
     .card_error {
         margin-bottom: 0;
     }
@@ -511,7 +516,7 @@ input[type=number] {
     }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 700px) and (orientation: landscape) {
     .AddCardModal .form {
         padding: 100px 10px 0 10px;
     }
@@ -642,5 +647,10 @@ input[type=number] {
 
     .card_error p {
         font-size: 12px;
+    }
+
+    .form fieldset .select select {
+        top: 3px;
+        left: 5px;
     }
 }
