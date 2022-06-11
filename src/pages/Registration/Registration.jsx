@@ -1,4 +1,6 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router";
+import getStorage from "../../helpers/getStorage";
 import SignInForm from "../../components/SignInForm/SignInForm";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import Overlay from "../../components/Overlay/Overlay";
@@ -9,6 +11,14 @@ import "./Registration.css";
 export default function Registration() {
   const [active, setActive] = useState(false);
   const [windowWidth] = useWindowSize();
+  const isAuth = getStorage("userID");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if(isAuth) {
+      navigate("/");
+    }
+  }, []);
 
   function handleActive() {
     setActive(!active);
