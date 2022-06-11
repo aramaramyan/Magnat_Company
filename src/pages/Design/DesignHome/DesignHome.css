@@ -1,4 +1,7 @@
 .DesignHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     background: var(--white);
@@ -101,5 +104,16 @@
 @media (max-width: 480px) {
     .design_content {
         width: 300px;
+    }
+}
+
+@media (max-height: 700px) and (orientation: landscape) {
+    .design_content {
+        height: 350px;
+    }
+
+    .design_img {
+        width: 200px;
+        height: 200px;
     }
 }
