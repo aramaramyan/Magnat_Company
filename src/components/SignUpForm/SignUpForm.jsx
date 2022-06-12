@@ -123,7 +123,7 @@ export default function SignUpForm({isSlide, handleSlide}) {
 
   return windowWidth > 1024 ? (
     <div className="form sign-up">
-      <h2>Time to feel like home,</h2>
+      <h2>Time to feel like home</h2>
       <label>
         <span>Full Name</span>
         <input
